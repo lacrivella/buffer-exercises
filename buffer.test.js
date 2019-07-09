@@ -18,6 +18,20 @@ describe('buffer test', () => {
     const smile = Buffer.from([0xF0, 0x9F, 0x98, 0x81]);
     console.log(smile.toString());
 
-    expect(smile.toString()).toEqual('😁')
+    expect(smile.toString()).toEqual('😁');
+  });
+
+  it('creates a buffer from hex code', () => {
+    const poop = Buffer.from([0xF0, 0x9F, 0x92, 0xA9]);
+    console.log(poop.toString());
+
+    expect(poop.toString()).toEqual('💩')
+  });
+
+  it('creates a buffer from hex code', () => {
+    const octopus = Buffer.from([0xF0, 0x9F, 0x90, 0x99]);
+    console.log(octopus.toString());
+
+    expect(octopus.toString()).toEqual('🐙')
   });
 });
